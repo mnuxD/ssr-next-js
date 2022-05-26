@@ -1,9 +1,14 @@
 import Link from "next/link";
-import Layout from "./layout";
+import Layout from "../../components/layout";
+import Head from "next/head";
+
 const CharatersPage = ({ characters }) => {
   console.log("EN componente...", characters);
   return (
     <Layout>
+      <Head>
+        <title>Character</title>
+      </Head>
       {characters?.map((item, i) => (
         <div key={i}>
           <Link
